@@ -1,6 +1,6 @@
 package introduction.sort;
 
-public class Selection_sort {
+public class SelectionSort {
 	/*选择法排序的思路：
 	把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来
 	比较完后，第一位就是最小的
