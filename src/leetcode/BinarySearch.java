@@ -24,7 +24,7 @@ public class BinarySearch {
 		int index = -1;
 		
 		int left = 0, right = array.length - 1;
-		int mid = left + (right - left)/2;
+		int mid = left + (right - left)/2;//这样不会导致溢出
 		while(left<=right){
 			mid = (left + right)/2;
 			
