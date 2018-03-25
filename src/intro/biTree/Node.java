@@ -11,7 +11,7 @@ public class Node {
 	}
 	
 	public void display(){
-		System.out.println(this.value + "\t");
+		System.out.print(this.value + "\t");
 	}
 	
 	@Override

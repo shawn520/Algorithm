@@ -1,5 +1,10 @@
 package intro.biTree;
 
+/**
+ * @author liush
+ *
+ */
+
 public class BinaryTree {
 
 	private Node root = null;
@@ -66,5 +71,91 @@ public class BinaryTree {
 		}
 		return error;	
 	}
+	
+	/**
+	 * 中序遍历（递归）：
+	 * 1.调用自身来遍历节点的左子树
+	 * 2.访问这个节点
+	 * 3.调用自身来遍历节点的右子树
+	 */
+	public void inOrderTraverse(){
+		System.out.println("中序遍历:");
+		inOrderTraverse(root);
+		System.out.println();
+		
+	}
+	private void inOrderTraverse(Node node){
+		if(node ==null)
+			return ;
+		
+		inOrderTraverse(node.leftChild);
+		node.display();
+		inOrderTraverse(node.rightChild);
+	}
+	
+	/**
+	 * 前序遍历（递归）：
+	 * 1.调用自身来遍历节点的左子树
+	 * 2.访问这个节点
+	 * 3.调用自身来遍历节点的右子树
+	 */
+	public void preOrderTraverse(){
+		System.out.println("前序遍历:");
+		preOrderTraverse(root);
+		System.out.println();
+		
+	}
+	private void preOrderTraverse(Node node){
+		if(node ==null)
+			return ;
+		
+		node.display();
+		inOrderTraverse(node.leftChild);
+		inOrderTraverse(node.rightChild);
+	}
+	
+	/**
+	 * 后序遍历（递归）：
+	 * 1.调用自身来遍历节点的左子树
+	 * 2.访问这个节点
+	 * 3.调用自身来遍历节点的右子树
+	 */
+	public void postOrderTraverse(){
+		System.out.println("后序遍历:");
+		postOrderTraverse(root);
+		System.out.println();
+		
+	}
+	private void postOrderTraverse(Node node){
+		if(node ==null)
+			return ;
+		
+		postOrderTraverse(node.leftChild);
+		postOrderTraverse(node.rightChild);
+		node.display();
+	}
+	
+	//获取最小值
+	public int getMinValue(){
+		Node current = root;
+		while(true){
+			if(current.leftChild == null){
+				return current.value;
+			}
+			current = current.leftChild;
+		}
+	}
+	
+	//获取最大值
+	public int getMaxValue(){
+		Node current = root;
+		while(true){
+			if(current.rightChild == null){
+				return current.value;
+			}
+			current = current.rightChild;
+		}
+	}
+	
 }
 
