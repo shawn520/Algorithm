@@ -1,8 +1,8 @@
-package introduction.sort;
+package test.toutiao;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -23,11 +23,12 @@ public class Main {
 	}
 	
 	public void solution(String m,String s){
-		for(int i=0;i<n;i++){
+/*		for(int i=0;i<n;i++){
 			for(int j=0;j<n;j++){
 				
 			}
 				
-		}
+		}*/
 	}
 }
+

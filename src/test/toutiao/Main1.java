@@ -1,5 +1,4 @@
-package introduction.sort;
-
+package test.toutiao;
 import java.util.Scanner;
 
 public class Main1 {
@@ -74,3 +73,4 @@ public class Main1 {
 	}
 
 }
+

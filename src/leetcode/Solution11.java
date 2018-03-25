@@ -1,6 +1,6 @@
-package introduction.sort;
+package leetcode;
 
-class Solution {
+class Solution11 {
     public static int maxArea(int[] height) {
         int max = 0;
 /*        for(int i=0;i<height.length;i++){
@@ -54,5 +54,6 @@ class Solution {
 		int [] a = {3,4,5,7,9,5};
 		int max = maxArea(a);
 		System.out.println(max);
-	}
+	}   
 }
+
