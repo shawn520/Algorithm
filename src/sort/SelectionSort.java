@@ -9,13 +9,6 @@ package sort;
  *初始化时，整个数组无序，每次从无序数组中选择最小的数，插入到有序数组中。
  */
 public class SelectionSort {
-
-	//交换
-	public static void swap(int [] a, int i, int j){
-		int temp = a[i];
-		a[i] = a[j];
-		a[j] = temp;
-	}
 	
 	public static void sort(int [] a){
 		for(int i=0;i<a.length;i++){
@@ -27,6 +20,13 @@ public class SelectionSort {
 			}
 			swap(a,i,minIndex);
 		}
+	}
+	
+	//交换
+	public static void swap(int [] a, int i, int j){
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 	}
 	
 	public static void print(int [] a){
