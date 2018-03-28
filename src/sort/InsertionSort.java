@@ -3,6 +3,8 @@
  */
 package sort;
 
+import java.util.Arrays;
+
 /**
  * @author liush
  * 
@@ -48,12 +50,14 @@ public class InsertionSort {
 		// TODO Auto-generated method stub
 		int [] array = {3,5,2,7,9,5,8,4};
 		System.out.println("排序前数组：");
-		print(array);
+		//print(array);
+		System.out.println(Arrays.toString(array));
 		
 		sort(array);//排序
 		
 		System.out.println("排序后数组：");
-		print(array);
+		//print(array);
+		System.out.println(Arrays.toString(array));
 	}
 
 }
