@@ -78,6 +78,15 @@ public class BinaryTree {
 		
 	}
 	
+	/*
+	 * 中序遍历的非递归实现：
+	 * 1.对于任意的节点current，若该节点不为空，则将该节点压栈，
+	 * 并将左子树节点置为current,重复此操作，指导current为空。
+	 * */
+	public void preOrderByStack(){
+		
+	}
+	
 	//前序遍历的递归实现
 	public void preOrderTraverse(){
 		System.out.println("前序遍历：");
