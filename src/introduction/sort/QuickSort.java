@@ -1,55 +1,52 @@
 package introduction.sort;
 
-public class QuickSort {
-    public void exchange(int [] array, int i, int j)
-    {
-        int temp;
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    
-    //
-    public int partition(int [] array, int p, int r)
-    {
-        int x = array[r-1];
-        int i = p-1;
-        for(int j=p;j<=r-2;j++)
-        {
-            if(array[j]<=x)
-            {
-                i = i + 1;
-                exchange(array,i,j);
-            }
-        }
-        exchange(array,i+1,r-1);
-        return i+1;
-    }
-    
-    //递归实现快排
-    void quicksort(int [] array, int p, int r)
-    {
-        if(p<r)
-        {
-            int q = partition(array,p,r);
-            quicksort(array,p,q-1);
-            quicksort(array,q+1,r-1);
-        }
-    }
+import java.util.Arrays;
 
-    public static void main(String [] args)
-    {
-    	//初始化一个数组
-        int [] array = {9,7,2,4,5,3,6,1,0};
-        
-        QuickSort qs = new QuickSort();
-        
-        qs.quicksort(array,0,array.length);
-        
-        //打印排序后的数组
-        for (int i=0;i<array.length;i++)
-        {
-            System.out.print(array[i]+" ");
-        }
-    }
+public class QuickSort{
+	public static void main(String[] args) {
+		int [] a = {3,5,8,4,7,6,2};
+		
+		System.out.println("排序前的数组："+Arrays.toString(a));
+		
+		sort(a);//排序
+		
+		System.out.println("排序后的数组："+Arrays.toString(a));
+	}
+
+	private static void sort(int[] a) {
+		// TODO Auto-generated method stub
+		quicksort(a,0,a.length-1);
+		
+	}
+
+	private static void quicksort(int[] a, int p, int r) {
+		// TODO Auto-generated method stub
+		if(p>=r)
+			return ;
+		int q = partition(a,p,r);
+		quicksort(a,p,q-1);
+		quicksort(a,q+1,r);
+	}
+
+	private static int partition(int[] a, int p, int r) {
+		// TODO Auto-generated method stub
+		int x = a[r];
+		int i=p-1;
+		int j=p;
+		for(j=p;j<r;j++){
+			if(a[j]<x){
+				i++;
+				exchange(a,i,j);
+			}
+		}
+		exchange(a,i+1,r);
+		return i+1;
+	}
+
+	private static void exchange(int[] a, int i, int j) {
+		// TODO Auto-generated method stub
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
 }
