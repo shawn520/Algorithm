@@ -1,5 +1,7 @@
 package binaryTree;
 
+import java.util.Stack;
+
 public class BinaryTree {
 	
 	private Node root = null;
@@ -80,12 +82,26 @@ public class BinaryTree {
 	
 	/*
 	 * 中序遍历的非递归实现：
-	 * 1.对于任意的节点current，若该节点不为空，则将该节点压栈，
-	 * 并将左子树节点置为current,重复此操作，指导current为空。
+	 * 
 	 * */
-	public void preOrderByStack(){
-		
-	}
+	public void inOrderByStack(){
+		System.out.println("中序遍历的非递归实现：");
+		Stack<Node> stack = new Stack<>();
+		Node current = root;
+		while(current != null || !stack.isEmpty()){
+			while(current != null){
+				stack.push(current);
+				current = current.leftChild;
+			}
+			if(!stack.isEmpty()){
+				current = stack.pop();
+				current.display();
+				current = current.rightChild;
+				}
+			}
+		System.out.println();
+		}
+	
 	
 	//前序遍历的递归实现
 	public void preOrderTraverse(){
@@ -103,6 +119,27 @@ public class BinaryTree {
 		preOrderTraverse(node.rightChild);
 	}
 	
+	//前序遍历的非递归实现
+	public void preOrderByStack(){
+		System.out.println("中序遍历的非递归实现：");
+		Stack<Node> stack = new Stack<>();
+		Node current = root;
+		while(current != null || !stack.isEmpty()){
+			while(current != null){
+				current.display();
+				stack.push(current);
+				current = current.leftChild;
+			}
+			if(!stack.isEmpty()){
+				current = stack.pop();
+				current = current.rightChild;
+			}
+			
+		}
+		System.out.println();
+		
+	}
+	
 	//后续遍历的递归实现
 	public void postOrderTraverse(){
 		System.out.println("后续遍历：");
@@ -118,6 +155,31 @@ public class BinaryTree {
 		postOrderTraverse(node.leftChild);
 		postOrderTraverse(node.rightChild);
 		node.display();
+	}
+	
+	//后续遍历的非递归实现：
+	//这个自己写出来有难度，得多联系几次。
+	public void postOrderByStack(){
+		System.out.println("后序遍历的非递归实现：");
+		Stack<Node> stack = new Stack<>();
+		Node current = root;
+		Node preNode = null;
+		while(current !=null || !stack.isEmpty()){
+			while(current != null){
+				stack.push(current);
+				current = current.leftChild;
+			}
+			if(!stack.isEmpty()){
+				current = stack.peek().rightChild;
+				if(current == null || current == preNode){
+					current = stack.pop();
+					current.display();
+					preNode = current;
+					current = null;
+				}
+			}
+		}
+		System.out.println();
 	}
 	
 	

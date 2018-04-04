@@ -5,6 +5,7 @@ public class Node {
 	Node leftChild;
 	Node rightChild;
 	
+	//构造函数
 	Node(int value){
 		this.value = value;
 	}
