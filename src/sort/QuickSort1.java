@@ -1,8 +1,8 @@
-package introduction.sort;
+package sort;
 
 import java.util.Arrays;
 
-public class QuickSort{
+public class QuickSort1{
 	public static void main(String[] args) {
 		int [] a = {3,5,8,4,7,6,2};
 		

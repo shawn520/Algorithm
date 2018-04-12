@@ -1,5 +1,4 @@
-package introduction.sort;
-import introduction.sort.util.PrintArray;
+package sort;
 
 public class Test {
 

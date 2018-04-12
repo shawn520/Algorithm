@@ -1,4 +1,4 @@
-package introduction.sort;
+package sort;
 
 public class BarrelSort {
 

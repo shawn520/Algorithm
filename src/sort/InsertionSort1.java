@@ -1,6 +1,6 @@
-package introduction.sort;
+package sort;
 
-public class InsertionSort {
+public class InsertionSort1 {
 
 	public void sort(int [] a){
 		int i,j;

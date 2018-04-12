@@ -1,7 +1,7 @@
-package introduction.sort;
+package sort;
 
 
-public class BubbleSort {
+public class BubbleSort1 {
 	
 	/*	冒泡法排序的思路：
 	第一步：从第一位开始，把相邻两位进行比较
