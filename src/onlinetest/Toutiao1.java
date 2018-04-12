@@ -1,7 +1,7 @@
-package test.toutiao;
+package onlinetest;
 import java.util.Scanner;
 
-public class Main1 {
+public class Toutiao1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

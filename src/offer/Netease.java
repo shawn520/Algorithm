@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test.netease;
+package offer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +64,7 @@ class Work{
 	}
 }
 
-public class Main {
+public class Netease {
 
 	/**
 	 * @param N 工作数

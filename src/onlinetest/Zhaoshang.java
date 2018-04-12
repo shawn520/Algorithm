@@ -1,9 +1,9 @@
-package test.zhaoshang;
+package onlinetest;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Zhaoshang {
 	/**
      * Given the number N, return all of the correct brackets.
      * @param n

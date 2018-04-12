@@ -1,4 +1,4 @@
-package test.pinduoduo;
+package onlinetest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author liush
  * 题目描述：
  */
-public class Tempare {
+public class Pinduoduo {
 	
 	
 	public static void main(String[] args) {

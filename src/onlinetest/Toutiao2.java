@@ -1,8 +1,8 @@
-package test.toutiao;
+package onlinetest;
 
 import java.util.Scanner;
 
-public class Main2 {
+public class Toutiao2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
