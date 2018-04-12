@@ -1,6 +1,6 @@
 package sort;
 
-//快排
+//快排的随机划分
 
 import java.util.Arrays;
 
