@@ -1,53 +1,62 @@
 package onlinetest;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class JingDong3 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         
+    	Scanner in = new Scanner(System.in);
         //输入一个正整数t
         int t = in.nextInt();
         if(t<1 || t>1000){
         	return ;
         }
-        int [] a = new int [t];
-        for(int i=0;i<t;i++){
-        	//给出N
-        	a[i] = in.nextInt(); 	
-        }
-        solution(a,t);
         
+        solution(t);
     }
+
+	private static void solution(int t) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		Stack<Character> stack = new Stack<>();
+		char c1 ='(';
+		char c2 =')';
+		
+		for(int i=0;i<t;i++){
+			int num=0;
+			String s = in.next();
+			
+			for(int j=0;i<s.length();i++){
+				char c = s.charAt(i);
+				
+				//如果是'('入栈
+				if(c==c1){
+					stack.push(c);
+				}else if(c==c2){
+					
+					//如果是')'且栈不为空，则出栈
+					if(!stack.isEmpty()){
+						stack.pop();
+					}else{
+						num++;
+					}
+				}else{
+					
+					//非法输入
+					return ;	
+				}
+			}
+			if((num==0 && stack.isEmpty()) || (num==1 && stack.size()==1)){
+				System.out.println("Yes");
+			}else{
+				System.out.println("No");
+			}
+		}
+		
+	}
     
-    public static void solution(int [] a,int t){
-    	for(int i=0;i<t;i++){
-        	String ans= devide(a[i]);
-        	System.out.println(ans);
-        }
-    }
-    public static String devide(int N){
-    	String ans = "No";
-    	if(N%2 !=0){
-    		return ans;
-    	}
-    	for(int i=2;i<N;i=i+2){
-    		if(N%i==0){
-    			int X = N/i;
-    			if(X%2==0){
-    				continue;
-    			}else{
-    				int Y = i;
-    				String s2 = Integer.toString(Y);
-    				String s1 = Integer.toString(X);
-    				ans = s1+" " + s2;
-    				return ans;
-    			}
-    			
-    		}
-    	}
-    	return ans;
-    }
-    
+   
 }
+
 
