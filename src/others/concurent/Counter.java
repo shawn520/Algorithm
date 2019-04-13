@@ -59,6 +59,7 @@ public class Counter {
      * 使用CAS实现线程安全计数
      */
     private void safeCount() {
+        //自旋CAS,直到成功为止
         for(;;) {
             int i = atomicI.get();
             boolean suc = atomicI.compareAndSet(i, ++i);
