@@ -9,6 +9,6 @@ public class TestThreadPool {
     public static void main(String [] args ) throws Exception{
         ExecutorService executorService = new ThreadPoolExecutor(1,1,
                 60L, TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(10));
-        executorService.execute(new MyRunnable());
+        //executorService.execute(new MyRunnable());
     }
 }
