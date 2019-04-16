@@ -1,4 +1,4 @@
-package others.thread.chapter4;
+package others.concurent.chapter4;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
