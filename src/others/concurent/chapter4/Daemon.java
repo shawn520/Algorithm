@@ -20,10 +20,12 @@ public class Daemon {
         @Override
         public void run() {
             try{
-                System.out.println("DaemonThread  work.");//不一定执行
+                //不一定执行
+                System.out.println("DaemonThread  work.");
                 SleepUtils.second(10);
             }finally {
-                System.out.println("DaemonThread finally run.");//不一定执行
+                //不一定执行
+                System.out.println("DaemonThread finally run.");
             }
         }
     }
