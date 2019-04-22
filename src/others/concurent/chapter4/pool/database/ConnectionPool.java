@@ -29,6 +29,7 @@ public class ConnectionPool {
     public void releaseConnection(Connection connection) {
         if(null != connection) {
             synchronized (pool) {
+                //连接之后需要进行通知, 其他消费者能感知到已经归还了一个连接
                 pool.addLast(connection);
                 pool.notifyAll();
             }
@@ -52,8 +53,10 @@ public class ConnectionPool {
             } else {
                 long future = System.currentTimeMillis() + mills;
                 long remaining = mills;
+                //连接池为空且等待时间大于0
                 while (pool.isEmpty() && remaining > 0) {
-                    pool.wait();
+                    //等待remaining时间
+                    pool.wait(remaining);
                     remaining = future - System.currentTimeMillis();
                 }
                 Connection result = null;
