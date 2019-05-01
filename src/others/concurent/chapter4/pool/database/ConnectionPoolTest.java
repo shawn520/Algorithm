@@ -11,14 +11,18 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ConnectionPoolTest {
     static ConnectionPool pool = new ConnectionPool(10);
-    //保证所有ConnectionRunner同时开始
+    /**
+     * 保证所有ConnectionRunner同时开始
+     */
     static CountDownLatch start = new CountDownLatch(1);
-    //main线程将会等待所有ConnectionRunner结束后才会继续执行
+    /**
+     * main线程将会等待所有ConnectionRunner结束后才会继续执行
+     */
     static CountDownLatch end;
 
     public static void main(String[] args) throws InterruptedException {
-        int threadCount = 20;
-        end = new CountDownLatch(10);
+        int threadCount = 50;
+        end = new CountDownLatch(threadCount);
         int count = 20;
         AtomicInteger got = new AtomicInteger();
         AtomicInteger notGot = new AtomicInteger();
@@ -76,3 +80,10 @@ public class ConnectionPoolTest {
         }
     }
 }
+
+/**
+ * total invoke: 1000
+ * got connection: 798
+ * not got connection: 202
+ * Disconnected from the target VM, address: '127.0.0.1:7281', transport: 'socket'
+ */
