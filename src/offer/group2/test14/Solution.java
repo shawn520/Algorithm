@@ -17,24 +17,13 @@ public class Solution {
     public ListNode FindKthToTail(ListNode head,int k) {
 
         int length = 0;
-        if(null == head) {
-            length = 0;
-        } else {
-            length = 1;
-        }
         ListNode node = head;
-        while (null != node.next ) {
+        while (null != node ) {
             node = node.next;
             length++;
         }
 
-        /*// 越界异常
-        if(k >= length) {
-            return null;
-        }*/
-
-        int index = 0;
-        index = length - k;
+        int index = length - k;
         if(index < 0) {
             return null;
         }
