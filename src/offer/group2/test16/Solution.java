@@ -14,7 +14,34 @@ class ListNode {
  * @author Shawn
  */
 public class Solution {
+
+    /**
+     * 递归实现
+     * @param list1
+     * @param list2
+     * @return
+     */
     public ListNode Merge(ListNode list1,ListNode list2) {
+
+        if(null == list1) {
+            return list2;
+        } else if (null == list2) {
+            return list1;
+        }
+
+        ListNode pMergeHead = null;
+        if(list1.val <= list2.val) {
+            pMergeHead = list1;
+            pMergeHead.next = Merge(list1.next,list2);
+        } else {
+            pMergeHead = list2;
+            pMergeHead.next = Merge(list1,list2.next);
+        }
+
+        return pMergeHead;
+    }
+
+    /*public ListNode Merge(ListNode list1,ListNode list2) {
         if(null == list1) {
             return list2;
         }
@@ -66,5 +93,5 @@ public class Solution {
         }
         return result;
 
-    }
+    }*/
 }
