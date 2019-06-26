@@ -1,7 +1,5 @@
 package offer.group2.test16;
 
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next = null;
@@ -11,45 +9,61 @@ class ListNode {
     }
 }
 /**
- * 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则.
+ * 输入两个单调递增的链表，输出两个链表合成后的链表，
+ * 当然我们需要合成后的链表满足单调不减规则.
  * @author Shawn
  */
 public class Solution {
     public ListNode Merge(ListNode list1,ListNode list2) {
+        if(null == list1) {
+            return list2;
+        }
 
-
-        ListNode node = list1;
-
-
-        ListNode result = node;
+        if(null == list2) {
+            return list1;
+        }
 
         ListNode p = list1;
         ListNode q = list2;
 
-        while (null != p && null != q) {
+        ListNode result;
+        if(p.val <= q.val) {
+            result = new ListNode(p.val);
+            p = p.next;
+        } else {
+            result = new ListNode(q.val);
+            q = q.next;
+        }
+        ListNode r = result;
+
+        while (null != p && null !=q) {
             if(p.val <= q.val) {
-                node = p;
-                node = node.next;
+                ListNode node = new ListNode(p.val);
+                r.next = node;
+                // 注意r指针的后移
+                r = r.next;
                 p = p.next;
             } else {
-                node = q;
-                node = node.next;
+                ListNode node = new ListNode(q.val);
+                r.next = node;
+                r = r.next;
                 q = q.next;
             }
         }
 
         while (null != p) {
-            node = p;
-            node = node.next;
+            ListNode node = new ListNode(p.val);
+            r.next = node;
+            r = r.next;
             p = p.next;
         }
 
         while (null != q) {
-            node = q;
-            node = node.next;
+            ListNode node = new ListNode(q.val);
+            r.next = node;
+            r = r.next;
             q = q.next;
         }
-
         return result;
 
     }
