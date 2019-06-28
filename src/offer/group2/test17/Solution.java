@@ -1,10 +1,6 @@
 package offer.group2.test17;
 
-/**
- * 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构。
- * @author Shawn
- * @date 2019/6/28
- */
+
 
 
 class TreeNode {
@@ -18,57 +14,49 @@ class TreeNode {
     }
 
 }
+
+/**
+ * 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构。
+ * 思路：分两步走，首先找跟B树根节点相同的节点。然后判断是否包含。
+ * 二次递归。
+ * @author Shawn
+ * @date 2019/6/28
+ */
 public class Solution {
     public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+
         Boolean result = false;
 
-        // 约定空树不是任意一个树的子结构
-        if(null == root1 || null == root2) {
-            return false;
-        }
-
-        if(root1.val ==root2.val) {
-            if(null == root1.left && null == root1.right &&
-                    null == root2.left && null == root2.right) {
-                result = true;
-            } else if(null != root1.left && null == root1.right &&
-                    null != root2.left && null == root2.right) {
-                Boolean left = HasSubtree(root1.left, root2.left);
-                if(left) {
-                    result = true;
-                }
-
-            } else if(null == root1.left && null != root1.right &&
-                    null == root2.left && null != root2.right) {
-                Boolean right = HasSubtree(root1.right, root2.right);
-                if(right) {
-                    result = true;
-                }
-
-            } else {
-                Boolean left = HasSubtree(root1.left, root2.left);
-                Boolean right = HasSubtree(root1.right, root2.right);
-                if(left && right) {
-                    result = true;
-                }
+        if(null != root1 && null != root2) {
+            if(root1.val == root2.val) {
+               result = DoesTreeContainsTree2(root1, root2);
             }
-        } else {
-            // 递归查询左子树是否包含root2
-            Boolean leftHasSubtree = HasSubtree(root1.left, root2);
-            if(leftHasSubtree) {
-                result = true;
-            } else {
-                // 递归查询右子树是否包含root2
-                Boolean rightHasSubtree = HasSubtree(root1.right, root2);
-                if(rightHasSubtree) {
-                    result = true;
-                }
+
+            if(!result) {
+                result = HasSubtree(root1.left, root2);
+            }
+            if(!result) {
+                result = HasSubtree(root1.right, root2);
             }
 
         }
 
         return result;
+    }
 
+    private Boolean DoesTreeContainsTree2(TreeNode root1, TreeNode root2) {
+        if(null == root2) {
+            return  true;
+        }
+        if(null == root1) {
+            return  false;
+        }
+        if(root1.val != root2.val) {
+            return false;
+        }
+
+        return DoesTreeContainsTree2(root1.left, root2.left) &&
+                DoesTreeContainsTree2(root1.right, root2.right);
     }
 
 }
