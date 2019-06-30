@@ -16,13 +16,6 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
         print(array);
     }
 
-    private void print(int[] array) {
-        for(int i=0; i< array.length; i++) {
-            System.out.print(array[i] + "\t");
-        }
-        System.out.println();
-    }
-
     @Override
     public void sort(int[] nums) {
         quicksort(nums, 0, nums.length-1);
@@ -30,11 +23,17 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
 
     private void quicksort(int[] array, int p, int r) {
         if(p < r) {
-            int q = partition(array, p, r);
+            int q = randomPartition(array, p, r);
             quicksort(array, p, q-1);
             quicksort(array, q+1, r);
         }
 
+    }
+
+    private int randomPartition(int[] a, int p, int r) {
+        int random = (int)(Math.floor(Math.random() * r)) ;
+        swap(a, r, random);
+        return partition(a, p, r);
     }
 
     private int partition(int[] a, int p, int r) {
@@ -50,6 +49,16 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
 
         return r;
     }
+
+    private void print(int[] array) {
+        for(int i=0; i< array.length; i++) {
+            System.out.print(array[i] + "\t");
+        }
+        System.out.println();
+    }
+
+
+
 
 
 }
