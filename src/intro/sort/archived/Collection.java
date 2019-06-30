@@ -1,4 +1,4 @@
-package intro.sort;
+package intro.sort.archived;
 
 import java.util.ArrayList;
 import java.util.Comparator;

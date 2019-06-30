@@ -1,24 +1,31 @@
-package intro.sort;
+/**
+ * 
+ */
+package intro.sort.archived;
 
 /**
  * @author liush
- *选择排序
- *时间复杂度：任何时候都为O(n2)
- *算法实现：
- *将数组中元素分为有序和无序
- *初始化时，整个数组无序，每次从无序数组中选择最小的数，插入到有序数组中。
+ * 冒泡排序算法
+ * 算法描述：设为从小到大排序
+ * 1.从第一个数起，依次与相邻元素比较，如果大于后一个元素，则交换，这样，一轮下来，
+ * 最大的数就置换到最后的位置了。
+ * 2.重复以上过程，直到所有元素有序为止。
+ *
  */
-public class SelectionSort {
+public class BubbleSort {
+
+	/**
+	 * @param args
+	 */
 	
+
 	public static void sort(int [] a){
 		for(int i=0;i<a.length;i++){
-			int minIndex = i;
-			for(int j=i;j<a.length;j++){
-				if(a[j]< a[minIndex]){
-					minIndex = j;
+			for(int j=0;j<a.length-1-i;j++){
+				if(a[j] > a[j+1]){
+					swap(a,j,j+1);
 				}
 			}
-			swap(a,i,minIndex);
 		}
 	}
 	

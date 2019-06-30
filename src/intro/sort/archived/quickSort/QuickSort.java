@@ -1,4 +1,4 @@
-package intro.sort.quickSort;
+package intro.sort.archived.quickSort;
 
 public class QuickSort {
     public int [] sort (int [] array) {

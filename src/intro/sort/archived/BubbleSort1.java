@@ -1,4 +1,4 @@
-package intro.sort;
+package intro.sort.archived;
 
 
 public class BubbleSort1 {

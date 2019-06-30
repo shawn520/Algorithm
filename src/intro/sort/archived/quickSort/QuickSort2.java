@@ -1,4 +1,4 @@
-package intro.sort;
+package intro.sort.archived.quickSort;
 
 import java.util.Arrays;
 
