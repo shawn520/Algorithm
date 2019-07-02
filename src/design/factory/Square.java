@@ -1,4 +1,4 @@
-package design.singleton.factory;
+package design.factory;
 
 /**
  * @author Shawn

@@ -1,4 +1,4 @@
-package design.singleton.factory;
+package design.factory;
 
 /**
  * 工厂模式的Demo实现
