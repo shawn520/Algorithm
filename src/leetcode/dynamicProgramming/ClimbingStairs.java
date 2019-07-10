@@ -3,6 +3,7 @@ package leetcode.dynamicProgramming;
 import org.junit.Test;
 
 /**
+ * 动态规划，爬梯子问题
  * @author Shawn
  * @date 2019/7/9
  */
@@ -12,14 +13,14 @@ public class ClimbingStairs {
     public void test() {
 
         // 测试用例：功能测试
-//        int result = climbStairs(10);
+        int result = climbStairs(10);
+
+        // 测试用例: 边界测试
+        //int result = climbStairs(2);
 
         // 测试用例：负面测试
-//        int result = climbStairs(-1);
+        //int result = climbStairs(-1);
 
-
-        // 测试用例1
-        int result = climbStairs(2);
         System.out.println(result);
     }
 
