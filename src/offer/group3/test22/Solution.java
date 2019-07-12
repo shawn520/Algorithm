@@ -1,4 +1,4 @@
-package offer.group2.test22;
+package offer.group3.test22;
 
 import org.junit.Test;
 
@@ -27,11 +27,9 @@ public class Solution {
         int numbers[] = {2,3,1,0,2,5,3};
         int length = 7;
         int [] duplication = new int[1];
-
         //边界测试
 
         //负面测试
-
 
         Boolean result = duplicate(numbers, length, duplication);
         System.out.println("result = " + result + ", data = " + duplication[0]);

@@ -1,7 +1,6 @@
-package offer.group2.test21;
+package offer.group3.test21;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
