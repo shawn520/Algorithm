@@ -15,7 +15,13 @@ public class Solution {
     public void test() {
 
         // 功能测试
-        int [] sequence = {2, 4, 3, 8, 11,1, 5};
+        //int [] sequence = {2, 4, 3, 8, 11, 9, 5};
+
+        // 边界测试
+        //int [] sequence = {};
+
+        // 负面测试
+        int [] sequence = {2, 4, 3, 8, 11, 1, 5};
         Boolean result = VerifySquenceOfBST(sequence);
         System.out.println(result);
     }
