@@ -11,26 +11,19 @@ package offer.group1.test1;
 
 public class Solution {
     public boolean Find(int target, int [][] array) {
-        boolean result = false;
-        int column = array[0].length;
-        //int length = array.
         int row = array.length;
-        if(row < 0 || column < 0){
-            return false;
-        }
-        //init
-        int i = row - 1;
-        int j = 0;
-        while(i>=0 && j< column) {
-            if(target == array[i][j]) {
-                result = true;
-                return result;
-            }else if(target > array[i][j]) {
-                j++;
-            }else {
+        int column = array[0].length;
+
+        for(int i = row-1, j = 0; (i >= 0) && (j < column);) {
+            if(array[i][j] == target) {
+                return true;
+            } else if(array[i][j] > target) {
                 i--;
+            } else {
+                j++;
             }
         }
-        return result;
+        return false;
+
     }
 }
