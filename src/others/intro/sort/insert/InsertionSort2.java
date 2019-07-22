@@ -1,4 +1,4 @@
-package others.intro.sort.archived;
+package others.intro.sort.insert;
 
 import java.util.Arrays;
 

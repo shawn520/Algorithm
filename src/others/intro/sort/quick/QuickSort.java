@@ -1,6 +1,7 @@
-package others.intro.sort;
+package others.intro.sort.quick;
 
 import org.junit.Test;
+import others.intro.sort.Sort;
 
 /**
  * @author Shawn

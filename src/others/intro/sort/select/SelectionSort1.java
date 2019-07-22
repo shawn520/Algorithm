@@ -1,4 +1,4 @@
-package others.intro.sort.archived;
+package others.intro.sort.select;
 
 public class SelectionSort1 {
 	/*选择法排序的思路：

@@ -1,4 +1,4 @@
-package others.intro.sort.archived;
+package others.intro.sort.barrel;
 
 public class BarrelSort {
 
