@@ -1,4 +1,4 @@
-package offer.group4;
+package offer.group4.test41;
 
 import org.junit.Test;
 
