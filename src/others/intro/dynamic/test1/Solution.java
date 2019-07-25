@@ -2,6 +2,8 @@ package others.intro.dynamic.test1;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * 钢条切割问题
  * @author Shawn
@@ -16,6 +18,10 @@ public class Solution {
 //        int result = memorizedCutRod(p, n);
         int result = bottomUpCutRod(p, n);
         System.out.println(result);
+
+        //
+        int [] s = extendedBottomUpCutRod(p, n);
+        System.out.println(s[n]);
     }
 
     /**
@@ -92,6 +98,32 @@ public class Solution {
             r[j] = q;
         }
         return r[n];
+    }
+
+    /**
+     * 给出具体的切割方案
+     * @param p
+     * @param n
+     * @return
+     */
+    public int [] extendedBottomUpCutRod(int [] p, int n) {
+
+        int [] r = new int[n+1];
+        // 数组s保存每个节点的最优切割方案
+        int [] s = new int[n+1];
+        r[0] = 0;
+        for(int j=1; j<=n; j++) {
+            int q= -1;
+            for(int i = 1; i <= j; i++) {
+                if(q < (p[i] + p[j-i])) {
+                    q = p[i] + p[j-i];
+                    s[j] = i;
+                }
+            }
+            r[j] = q;
+        }
+
+        return s;
     }
 
 
