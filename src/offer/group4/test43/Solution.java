@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * 对应每个测试案例，输出两个数，小的先输出。
  *
  * 思路：首先二分法查找S的插入位置，
- * 然后i指向数组的左边，j指向插入位置的左边。
+ * 然后i指向数组的左边，j指向待插入位置的左边。
  * 如果a[i] + a[j] > S, 则j--
  * 如果a[i] + a[j] < S, 则i++
  *
@@ -71,7 +71,7 @@ public class Solution {
                 binarySearch(array, mid+1, right, sum);
             }
         }
-        // 没有则返回带插入右边的位置
+        // 没有则返回待插入右边的位置
         return right;
     }
 }
