@@ -1,4 +1,4 @@
-package others.online;
+package others.online.archived;
 import java.util.Scanner;
 
 public class Toutiao1 {

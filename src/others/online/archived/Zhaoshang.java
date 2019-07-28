@@ -1,4 +1,4 @@
-package others.online;
+package others.online.archived;
 
 import java.util.ArrayList;
 import java.util.Scanner;

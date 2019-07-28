@@ -1,4 +1,4 @@
-package others.online;
+package others.online.archived;
 import java.util.Stack;
 
 /* 用两个栈来实现一个队列，完成队列的Push和Pop操作。 

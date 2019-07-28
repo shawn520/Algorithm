@@ -1,4 +1,4 @@
-package others.online;
+package others.online.archived;
 //2018.4.10华为在线编程第二题，通过率100，主要考察贪心算法。
 import java.util.Scanner;
 
