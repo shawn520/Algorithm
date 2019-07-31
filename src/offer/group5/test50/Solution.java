@@ -1,4 +1,4 @@
-package offer.group5;
+package offer.group5.test50;
 
 import org.junit.Test;
 
@@ -23,6 +23,9 @@ public class Solution {
         String s = "+123";
         int result = StrToInt(s);
         System.out.println(result);
+
+        int result2 = Integer.valueOf(s);
+        System.out.println(result2);
     }
 
     public int StrToInt(String str) {
