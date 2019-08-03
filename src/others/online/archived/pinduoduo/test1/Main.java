@@ -1,6 +1,4 @@
-package others.online.pinduoduo.test1;
-
-import org.junit.Test;
+package others.online.archived.pinduoduo.test1;
 
 import java.util.Arrays;
 import java.util.Scanner;

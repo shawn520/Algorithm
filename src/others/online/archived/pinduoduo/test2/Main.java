@@ -1,6 +1,4 @@
-package others.online.pinduoduo.test2;
-
-import org.junit.Test;
+package others.online.archived.pinduoduo.test2;
 
 import java.util.HashMap;
 import java.util.Scanner;
