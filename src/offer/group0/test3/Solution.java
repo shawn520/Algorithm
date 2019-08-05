@@ -20,7 +20,7 @@ public class Solution {
     }
 
 
-    //方法一:使用栈的特性
+    // 方法一:使用栈的特性
     public ArrayList<Integer> useStack(ListNode listNode) {
         Stack<Integer> stack = new Stack<>();
         while (null != listNode) {
@@ -36,7 +36,7 @@ public class Solution {
     }
 
 
-    //方法二:两个队列实现先进后出
+    // 方法二:两个队列实现先进后出
     public ArrayList<Integer> useTwoArrayList(ListNode listNode) {
         List<Integer> arrayList = new ArrayList<>();
         ArrayList<Integer> newArray = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Solution {
         return newArray;
     }
 
-    //方法三:使用递归的方法
+    // 方法三:使用递归的方法
     ArrayList<Integer> arrayList = new ArrayList<>();
     public ArrayList<Integer> useRecursive(ListNode listNode) {
         if(null != listNode) {
