@@ -36,7 +36,17 @@ public class Solution {
 
     }
 
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
+    /**
+     * 方法1：遍历数组，将数组中的元素放到新建的数组对应下标内。
+     *
+     * 时间复杂度：O(n)
+     * 空间复杂度: O(n)
+     * @param numbers
+     * @param length
+     * @param duplication
+     * @return
+     */
+    public boolean duplicate1(int numbers[],int length,int [] duplication) {
         int [] array = new int[length];
         for(int i=0; i<length; i++) {
             array[i] = -1;
@@ -54,4 +64,47 @@ public class Solution {
         return false;
 
     }
+
+    /**
+     * 方法2：对数组进行重排
+     * 改进版，对空间复杂度进行优化
+     * 1. 数组中第i个位置的数m是否和下标i相等，相等则i++
+     * 2. 不相等，则判断m是否和下标为m的数相等，相等则m重复为重复数字
+     * 3. 不相等，则交换下标为i和下表为m的数字，继续重复以上步骤。
+     *
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * @param numbers
+     * @param length
+     * @param duplication
+     * @return
+     */
+    public boolean duplicate(int numbers[],int length,int [] duplication) {
+        if(null == numbers || length <= 1) {
+            return false;
+        }
+
+        int i = 0;
+        while (i < length) {
+            if(numbers[i] != i) {
+                if(numbers[i] != numbers[numbers[i]]) {
+                    swap(numbers, i, numbers[i]);
+                } else {
+                    duplication[0] = numbers[i];
+                    return true;
+                }
+            } else {
+                i++;
+            }
+        }
+
+        return false;
+    }
+
+    public void swap(int [] numbers, int i, int j) {
+        int temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
+    }
+
 }
