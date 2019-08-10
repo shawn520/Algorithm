@@ -11,7 +11,7 @@ public class Solution {
 
     @Test
     public void test() {
-        TreeNode node1 = new TreeNode(1);
+        /*TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
         TreeNode node3 = new TreeNode(3);
         TreeNode node4 = new TreeNode(4);
@@ -25,7 +25,7 @@ public class Solution {
         //node3.right = node6;
         node5.left = node7;
         Boolean result = IsBalanced_Solution(node1);
-        System.out.println(result);
+        System.out.println(result);*/
 
     }
 
