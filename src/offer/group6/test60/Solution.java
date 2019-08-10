@@ -1,8 +1,6 @@
-package offer.test60;
+package offer.group6.test60;
 
 import org.junit.Test;
-
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.ArrayList;

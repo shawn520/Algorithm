@@ -1,4 +1,4 @@
-package offer.test61;
+package offer.group6.test61;
 
 /**
  * @author Shawn

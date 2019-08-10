@@ -1,10 +1,10 @@
-package offer.test60;
+package offer.group6.test60;
 
 /**
  * @author Shawn
  * @date 2019/8/7
  */
-public class TreeNode {
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
