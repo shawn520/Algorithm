@@ -13,7 +13,7 @@ import java.util.List;
  * 按结点数值大小顺序第三小结点的值为4。
  *
  * 分析：
- * 二叉搜索树，先序遍历有序。
+ * 二叉搜索树，中序遍历有序。
  * 注意k的取值范围，（1，tree.size())
  * @author Shawn
  * @date 2019/8/12
@@ -46,7 +46,7 @@ public class Solution {
             return null;
         }
 
-        List<TreeNode> list = preOrder(pRoot);
+        List<TreeNode> list = inOrder(pRoot);
 
         if(k > list.size()) {
             return null;
@@ -54,18 +54,18 @@ public class Solution {
         return list.get(k-1);
     }
 
-    private List<TreeNode> preOrder(TreeNode pRoot) {
+    private List<TreeNode> inOrder(TreeNode pRoot) {
 
         if(null == pRoot) {
             return null;
         }
         List<TreeNode> list = new ArrayList<>();
         if(null != pRoot.left) {
-            list.addAll(preOrder(pRoot.left));
+            list.addAll(inOrder(pRoot.left));
         }
         list.add(pRoot);
         if(null!= pRoot.right) {
-            list.addAll(preOrder(pRoot.right));
+            list.addAll(inOrder(pRoot.right));
         }
         return list;
 
