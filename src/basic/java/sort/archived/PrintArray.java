@@ -1,4 +1,4 @@
-package others.intro.sort.archived;
+package basic.java.sort.archived;
 
 public class PrintArray {
 	public void beforeSort(int [] a){

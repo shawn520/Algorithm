@@ -1,7 +1,7 @@
-package others.intro.sort.quick;
+package basic.java.sort.archived.quick;
 
 import org.junit.Test;
-import others.intro.sort.Sort;
+import basic.java.sort.Sort;
 
 /**
  * @author Shawn
