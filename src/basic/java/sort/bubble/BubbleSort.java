@@ -3,6 +3,8 @@
  */
 package basic.java.sort.bubble;
 
+import java.util.Arrays;
+
 /**
  * @author liush
  * 冒泡排序算法
@@ -14,10 +16,14 @@ package basic.java.sort.bubble;
  */
 public class BubbleSort {
 
-	/**
-	 * @param args
-	 */
-	
+	public static void main(String[] args) {
+		int [] array = {3,5,2,7,9,5,8,4};
+		System.out.println("排序前数组：" + Arrays.toString(array));
+		// 排序
+		sort(array);
+		System.out.println("排序后数组: "+Arrays.toString(array));
+
+	}
 
 	public static void sort(int [] a){
 		for(int i=0;i<a.length;i++){
@@ -29,32 +35,10 @@ public class BubbleSort {
 		}
 	}
 	
-	//交换
 	public static void swap(int [] a, int i, int j){
 		int temp = a[i];
 		a[i] = a[j];
 		a[j] = temp;
-	}
-	
-	public static void print(int [] a){
-		for(int i=0;i<a.length;i++){
-			System.out.print(a[i]+"\t");
-		}
-		System.out.println();
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int [] array = {3,5,2,7,9,5,8,4};
-		System.out.println("排序前数组：");
-		print(array);
-		
-		sort(array);//排序
-		
-		System.out.println("排序后数组：");
-		print(array);
-		
-
 	}
 
 }
