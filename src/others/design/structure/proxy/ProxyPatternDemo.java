@@ -5,7 +5,7 @@ package others.design.structure.proxy;
  * @date 2019/7/5
  */
 public class ProxyPatternDemo {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         // 第一次,图片从disk加载
         Image image = new ProxyImage("box");
@@ -13,6 +13,13 @@ public class ProxyPatternDemo {
 
         // 第二次，图片不用从disk加载
         image.display();
+
+    }*/
+
+    public static void main(String[] args) {
+
+        /*Class clazz = Class.forName("others.design.structure.proxy.Image");
+        clazz.newInstance();*/
 
     }
 }
