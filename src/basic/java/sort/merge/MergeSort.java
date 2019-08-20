@@ -15,17 +15,12 @@ import java.util.Arrays;
 public class MergeSort {
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int [] array = {3,5,2,7,9,5,8,4};
-		System.out.println("排序前数组：");
-		//print(array);
-		System.out.println(Arrays.toString(array));
+		System.out.println("排序前数组：" + Arrays.toString(array));
 		
-		sort(array);//排序
+		sort(array);
 		
-		System.out.println("排序后数组：");
-		//print(array);
-		System.out.println(Arrays.toString(array));
+		System.out.println("排序后数组：" + Arrays.toString(array));
 	}
 	
 	//接口
