@@ -1,24 +1,17 @@
 package basic.java.sort.insert;
 
-import basic.java.sort.select.Selection;
+import java.util.Arrays;
 
 public class Insertion {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		//初始化一个数组
         Comparable [] array = {9,7,2,4,5,3,6,1,0};
-        
-        Selection ss = new Selection();
-        
+
         sort(array);
         
-        //打印排序后的数组
-        for (int i=0;i<array.length;i++)
-        {
-            System.out.print(array[i]+" ");
-        }
+        // 打印排序后的数组
+        System.out.println(Arrays.toString(array));
 	}
 	
 	public static void sort(Comparable [] a){
