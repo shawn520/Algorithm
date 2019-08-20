@@ -1,4 +1,4 @@
-package others.leetcode;
+package leetcode.archived;
 
 class Solution11 {
     public static int maxArea(int[] height) {

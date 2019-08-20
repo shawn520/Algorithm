@@ -1,4 +1,4 @@
-package others.leetcode;
+package leetcode.archived;
 
 public class Solution1 {
 /*	题目描述

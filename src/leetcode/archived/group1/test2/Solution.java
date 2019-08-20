@@ -1,4 +1,4 @@
-package others.leetcode.group1.test2;
+package leetcode.archived.group1.test2;
 
 /**
  * @author Shawn

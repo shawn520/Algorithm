@@ -1,4 +1,4 @@
-package others.leetcode;
+package leetcode.archived;
 import java.util.Set;
 import java.util.TreeSet;
 

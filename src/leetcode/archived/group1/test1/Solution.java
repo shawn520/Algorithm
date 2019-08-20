@@ -1,4 +1,4 @@
-package others.leetcode.group1.test1;
+package leetcode.archived.group1.test1;
 
 import java.util.HashMap;
 import java.util.Map;
