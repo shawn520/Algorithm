@@ -1,4 +1,4 @@
-package others.intro.sort.bubble;
+package basic.java.sort.bubble;
 
 /**
  * 冒泡排序的优化版

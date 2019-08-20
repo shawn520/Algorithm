@@ -1,4 +1,4 @@
-package others.intro.sort.select;
+package basic.java.sort.select;
 
 /**
  * @author liush

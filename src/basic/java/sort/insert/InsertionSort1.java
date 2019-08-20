@@ -1,4 +1,4 @@
-package others.intro.sort.insert;
+package basic.java.sort.insert;
 
 public class InsertionSort1 {
 

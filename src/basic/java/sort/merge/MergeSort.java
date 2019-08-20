@@ -1,7 +1,7 @@
 /**
  * 
  */
-package others.intro.sort.merge;
+package basic.java.sort.merge;
 
 import java.util.Arrays;
 

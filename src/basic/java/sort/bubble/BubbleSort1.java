@@ -1,4 +1,4 @@
-package others.intro.sort.bubble;
+package basic.java.sort.bubble;
 
 
 public class BubbleSort1 {

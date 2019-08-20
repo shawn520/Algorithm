@@ -1,29 +1,38 @@
 /**
  * 
  */
-package others.intro.sort.bubble;
+package basic.java.sort.shell;
+
+import java.util.Arrays;
 
 /**
  * @author liush
- * 冒泡排序算法
- * 算法描述：设为从小到大排序
- * 1.从第一个数起，依次与相邻元素比较，如果大于后一个元素，则交换，这样，一轮下来，
- * 最大的数就置换到最后的位置了。
- * 2.重复以上过程，直到所有元素有序为止。
- *
+ * @version 1.0
+ * 希尔排序
+ * 算法描述：
+ * 1.
  */
-public class BubbleSort {
+public class ShellSort {
 
 	/**
+	 * 在插入时，采用交换法
 	 * @param args
 	 */
 	
-
 	public static void sort(int [] a){
-		for(int i=0;i<a.length;i++){
-			for(int j=0;j<a.length-1-i;j++){
-				if(a[j] > a[j+1]){
-					swap(a,j,j+1);
+		
+		//增量gap,并逐步缩小增量
+		for(int gap=a.length/2;gap>0;gap=gap/2){
+			
+			//从第gap个元素起，逐个对其所在的组进行插入排序操作
+			for(int i = gap;i<a.length;i++){
+				
+				int j=i;
+				while(j-gap>=0 && a[j]<=a[j-gap]){
+					
+					//插入排序操作
+					swap(a,j,j-gap);
+					j = j - gap;
 				}
 			}
 		}
@@ -35,24 +44,24 @@ public class BubbleSort {
 		a[i] = a[j];
 		a[j] = temp;
 	}
-	
+		
 	public static void print(int [] a){
 		for(int i=0;i<a.length;i++){
 			System.out.print(a[i]+"\t");
 		}
 		System.out.println();
 	}
-	
+		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int [] array = {3,5,2,7,9,5,8,4};
 		System.out.println("排序前数组：");
-		print(array);
+		System.out.println(Arrays.toString(array));
 		
 		sort(array);//排序
 		
 		System.out.println("排序后数组：");
-		print(array);
+		System.out.println(Arrays.toString(array));
 		
 
 	}

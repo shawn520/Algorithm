@@ -1,4 +1,4 @@
-package others.intro.sort;
+package basic.java.sort;
 
 /**
  * @author Shawn

@@ -1,4 +1,4 @@
-package others.intro.sort.barrel;
+package basic.java.sort.barrel;
 
 public class BarrelSort {
 

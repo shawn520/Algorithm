@@ -1,7 +1,7 @@
 /**
  * 
  */
-package others.intro.sort.insert;
+package basic.java.sort.insert;
 
 import java.util.Arrays;
 
