@@ -11,9 +11,9 @@ public class Synchronized {
         synchronized (Synchronized.class) {
 
         }
+        m();
 
     }
-    //静态同步方法， 对Synchronized class 对象进行加锁
     public static synchronized void m() {
 
     }
