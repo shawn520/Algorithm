@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2019/4/17
  */
 public class WaitNotify {
-    static boolean flag = true;
+    static volatile boolean flag = true;
     static Object lock = new Object();
 
     public static void main(String[] args) throws InterruptedException {
@@ -52,9 +52,8 @@ public class WaitNotify {
                 System.out.println(Thread.currentThread() + "hold lock. notify");
                 lock.notify();
                 flag = false;
-                //SleepUtils.second(5); 结果3,4 逆序
             }
-            SleepUtils.second(5);
+            //SleepUtils.second(5);
             synchronized (lock) {
                 System.out.println(Thread.currentThread() + "hold lock again. ");
                 SleepUtils.second(5);
