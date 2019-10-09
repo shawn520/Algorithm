@@ -12,7 +12,7 @@ public class Daemon {
         Thread thread = new Thread(new DaemonRunner(), "DaemonRunner");
         thread.setDaemon(true);
         thread.start();
-        //TimeUnit.SECONDS.sleep(100);
+        TimeUnit.SECONDS.sleep(12);
     }
 
     static class DaemonRunner implements Runnable {
