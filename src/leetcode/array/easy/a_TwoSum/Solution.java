@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 思路：One-pass Hash Table
+ * 时间复杂度:O(n)，一次遍历
  * @author Shawn
  * @date 2020/7/13
  */
