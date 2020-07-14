@@ -1,6 +1,10 @@
 package leetcode.array.easy.c_RemoveElement;
 
 /**
+ * 思路：two pointers
+ * [0, i]: !val
+ * [i+1, j-1]: val
+ * [j, nums.length]: uncovered
  * @author Shawn
  * @date 2020/7/14
  */

@@ -1,6 +1,11 @@
 package leetcode.array.easy.b_RemoveDuplicatesfromSortedArray;
 
 /**
+ * 思路：two pointers(i, j)
+ * [0, i]：no duplicates
+ * [i+1, j-1] duplicates
+ * [j, nums.length) uncovered
+ *
  * @author Shawn
  * @date 2020/7/14
  */
