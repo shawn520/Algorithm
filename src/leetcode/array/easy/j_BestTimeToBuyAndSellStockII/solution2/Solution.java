@@ -1,10 +1,13 @@
-package leetcode.array.easy.j_BestTimeToBuyAndSellStockII;
+package leetcode.array.easy.j_BestTimeToBuyAndSellStockII.solution2;
 
 /**
  * 思路：
  * 贪心算法，局部最优->全局最优
  * 如果今天比昨天涨了，则交易
  * 如果没涨则不交易
+ *
+ * 时间复杂度O(n)
+ * 空间复杂度O(1)
  * @author Shawn
  * @date 2020/7/17
  */
