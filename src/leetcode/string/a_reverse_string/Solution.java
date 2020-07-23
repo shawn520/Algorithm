@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.string.a_reverse_string;
 
 /**
  * 344. Reverse String
