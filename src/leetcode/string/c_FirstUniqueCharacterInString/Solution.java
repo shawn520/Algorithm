@@ -8,7 +8,7 @@ import java.util.Map;
  * 分析：
  * 用map存储字符出现的次数
  * 时间复杂度：O(2n)
- * 空间复杂度: O(1.35n)
+ * 空间复杂度: O(1)
  * @author Shawn
  * @date 2020/7/23
  */
