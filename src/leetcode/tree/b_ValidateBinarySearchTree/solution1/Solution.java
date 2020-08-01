@@ -1,4 +1,4 @@
-package leetcode.tree.b_ValidateBinarySearchTree;
+package leetcode.tree.b_ValidateBinarySearchTree.solution1;
 
 /**
  * 98. Validate Binary Search Tree
@@ -17,12 +17,9 @@ class Solution {
   }
   public boolean recurse(TreeNode node, Integer lower, Integer upper) {
     if(null == node) return true;
-    int val = node.val;
-    if(null != lower && val <=lower) return false;
-    if(null != upper && val >= upper) return false;
-    if(!recurse(node.left, lower, val)) return false;
-    if(!recurse(node.right, val, upper)) return false;
-    return  true ;
+    if(null != upper && node.val >= upper) return false;
+    if(null != lower && node.val <= lower) return false;
+    return recurse(node.left, lower, node.val) && recurse(node.right, node.val, upper);
   }
 }
 
