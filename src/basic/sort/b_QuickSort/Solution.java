@@ -24,7 +24,7 @@ public class Solution {
     @Test
     public void main() {
         int [] arr = {49, 38, 65, 97, 76, 13, 27, 49};
-        System.out.println("before sort: " + Arrays.toString(arr));
+        System.out.println("before e_sort: " + Arrays.toString(arr));
         sort(arr);
         System.out.println("after sorted: " + Arrays.toString(arr));
     }

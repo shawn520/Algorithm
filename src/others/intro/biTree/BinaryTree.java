@@ -65,7 +65,7 @@ public class BinaryTree {
 						break;
 					}
 				}else {				//如果找到值相同节点，则什么也不做
-					error = "having same value in binary tree.";
+					error = "having same value in binary d_tree.";
 				}
 			} 	//end of while	
 		}

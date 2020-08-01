@@ -56,8 +56,8 @@ public class Main {
         List<int []> list = new ArrayList<>(t);
         for(int i = 0; i < t; i++) {
             int n = 5;
-            int [] array = {17, 6, 17, 11, 17};
-            list.add(array);
+            int [] a_array = {17, 6, 17, 11, 17};
+            list.add(a_array);
         }
 
         List<Boolean> result = get(list);

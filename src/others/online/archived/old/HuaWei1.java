@@ -42,7 +42,7 @@ public class HuaWei1 {
       
     public static Map count(String string){  
     	
-    	//String str = string.toString();
+    	//String str = b_string.toString();
           
         char[] buffer=string.toCharArray();  
           

@@ -29,7 +29,7 @@ public class Main {
         // 负值测试
         *//*int [] array1 = {20, 1, 23};
         int [] array2 = {50, 26, 7};*//*
-        sort(array1, array2);
+        e_sort(array1, array2);
     }*/
 
     public static void sort(int[] array1, int[] array2) {

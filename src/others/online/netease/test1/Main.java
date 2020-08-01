@@ -49,9 +49,9 @@ public class Main {
 
     /*@Test
     public void test(){
-        int [] array = {100, 98, 87};
+        int [] a_array = {100, 98, 87};
         int [] query = {1, 2, 3};
-        compute(array, query);
+        compute(a_array, query);
     }*/
 
     private static void compute(int[] array, int[] query) {

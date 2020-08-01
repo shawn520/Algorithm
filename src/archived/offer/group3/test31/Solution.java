@@ -20,12 +20,12 @@ public class Solution {
     public void test() {
         // 功能测试
         int [] array = {6,-3,-2,7,-15,1,2,2};
-//        int [] array = {1, -2, 3, 10, -4, 7, 2, -5};
+//        int [] a_array = {1, -2, 3, 10, -4, 7, 2, -5};
         // 边界测试
-//        int [] array = {};
+//        int [] a_array = {};
 
         int result = FindGreatestSumOfSubArray(array);
-        System.out.println("Max sum of sub array :" + result);
+        System.out.println("Max sum of sub a_array :" + result);
     }
 
     // 牛客高赞别人的解

@@ -26,7 +26,7 @@ public class Solution {
         // 功能测试
         int [] array = {1,2,3,2,2,2,5,4,2};
         // 边界测试
-//        int [] array = {1};
+//        int [] a_array = {1};
 
         int value = MoreThanHalfNum_Solution(array);
         System.out.println(value);

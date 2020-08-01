@@ -1,7 +1,7 @@
 package others.online.archived.old;
 
 /**
- * Definition for binary tree
+ * Definition for binary d_tree
  * public class TreeNode {
  *     int val;
  *     TreeNode left;

@@ -61,7 +61,7 @@ public class Huawei2 {
 			}
 			
 			number++;//跳的次数自增
-			//System.out.println(array[i]);
+			//System.out.println(a_array[i]);
 			
 			i = i + index;		//跳到下一跳
 			max = -1;		//

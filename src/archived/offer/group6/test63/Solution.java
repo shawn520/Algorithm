@@ -14,7 +14,7 @@ import java.util.List;
  *
  * 分析：
  * 二叉搜索树，中序遍历有序。
- * 注意k的取值范围，（1，tree.size())
+ * 注意k的取值范围，（1，d_tree.size())
  * @author Shawn
  * @date 2019/8/12
  */

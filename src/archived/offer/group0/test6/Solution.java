@@ -36,7 +36,7 @@ public class Solution {
                 return array[mid+1];
             }else if(array[mid]>array[0] && array[mid+1] >array[0]) {
                 return findMinNumber(array, mid + 1, right);
-                //}else if(array[mid]<array[0] && array[mid] >array[mid-1]){
+                //}else if(a_array[mid]<a_array[0] && a_array[mid] >a_array[mid-1]){
             }else {
                 return findMinNumber(array,left,mid);
             }

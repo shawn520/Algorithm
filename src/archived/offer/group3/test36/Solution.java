@@ -21,7 +21,7 @@ public class Solution {
         int [] array = {1,2,3,4,5,6,7,0};
 
         // 边界测试
-//        int [] array = {};
+//        int [] a_array = {};
 
         int result = InversePairs(array);
         System.out.println(result);
@@ -29,7 +29,7 @@ public class Solution {
 
     public int InversePairs(int [] array) {
         // 冒泡排序时间复杂度O(n^2).时间复杂度太高
-        //return bubble_sort(array)%1000000007;
+        //return bubble_sort(a_array)%1000000007;
         int count = 0;
         if(null == array || array.length ==0) {
             return count;

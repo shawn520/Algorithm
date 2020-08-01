@@ -22,14 +22,14 @@ public class Solution {
     public void test() {
 
 
-//        int [] array = {1,2,4,5,5,5,5,6, 9, 10};
-//        int [] array = {1,3,3,3,3,4,5};
+//        int [] a_array = {1,2,4,5,5,5,5,6, 9, 10};
+//        int [] a_array = {1,3,3,3,3,4,5};
 
         // 功能测试
-//        int count = GetNumberOfK(array, 5);
+//        int count = GetNumberOfK(a_array, 5);
 
         //负值测试
-//        int count = GetNumberOfK(array, 10);
+//        int count = GetNumberOfK(a_array, 10);
 
         // 边界测试
         int [] array = {3};

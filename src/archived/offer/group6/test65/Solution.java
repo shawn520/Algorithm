@@ -20,9 +20,9 @@ public class Solution {
 
     /*@Test
     public void test() {
-        int [] array = {2,3,4,2,6,2,5,1};
+        int [] a_array = {2,3,4,2,6,2,5,1};
         int size = 3;
-        ArrayList<Integer> result = maxInWindows(array, size);
+        ArrayList<Integer> result = maxInWindows(a_array, size);
         System.out.println(result.toString());
     }*/
 
