@@ -1,7 +1,7 @@
 package com.github.demo.designPattern.creation.abstractfactory.shape;
 
-import com.github.designPattern.creation.abstractfactory.AbstractFactory;
-import com.github.designPattern.creation.abstractfactory.color.Color;
+import com.github.demo.designPattern.creation.abstractfactory.AbstractFactory;
+import com.github.demo.designPattern.creation.abstractfactory.color.Color;
 
 
 /**

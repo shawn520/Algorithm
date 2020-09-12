@@ -1,4 +1,4 @@
-package com.github.demo.basic.java.jdbc;
+package com.github.demo.basic.java.util;
 
 import org.junit.Test;
 

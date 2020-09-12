@@ -20,7 +20,7 @@ import java.util.Arrays;
  * @author Shawn
  * @date 2020/7/16
  */
-public class Solution {
+public class TestQuickSort {
     @Test
     public void main() {
         int [] arr = {49, 38, 65, 97, 76, 13, 27, 49};

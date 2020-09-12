@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @author Shawn
  * @date 2020/7/15
  */
-public class Solution {
+public class TestInsertSort {
     @Test
     public void main() {
         int [] arr = {49, 38, 65, 97, 76, 13, 27, 49};
