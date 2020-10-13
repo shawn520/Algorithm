@@ -10,8 +10,10 @@ public class Client {
         ITeacherDao target = new TeacherDao();
 
         ITeacherDao proxyInstance = (ITeacherDao)new ProxyFactory(target).getProxyInstance();
+//        System.out.println("proxyInstance = " + proxyInstance);
+        //proxyInstance = class com.sun.proxy.$Proxy0 内存中动态生成的代理对象
 //        System.out.println("proxyInstance = " + proxyInstance.getClass());
-        proxyInstance.teach();
+//        proxyInstance.teach();
         proxyInstance.sayHello("tom");
 
     }
