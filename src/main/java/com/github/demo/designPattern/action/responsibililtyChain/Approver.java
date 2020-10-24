@@ -1,13 +1,12 @@
-package com.github.demo.designPattern.responsibililtyChain;
+package com.github.demo.designPattern.action.responsibililtyChain;
 
 /**
  * @author Shawn
  * @date 2020/8/31
  */
 public abstract class Approver {
-
-  Approver approver;  //下一个处理者
-  String name;
+    Approver approver;  //下一个处理者
+    String name;
 
   public Approver(String name) {
     this.name = name;

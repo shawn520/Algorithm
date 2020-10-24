@@ -1,4 +1,4 @@
-package com.github.demo.designPattern.responsibililtyChain;
+package com.github.demo.designPattern.action.responsibililtyChain;
 
 /**
  * SchoolMaster
@@ -10,7 +10,7 @@ public class SchoolMaster extends Approver {
     super(name);
   }
 
-  @Override
+    @Override
   public void process(PurchaseRequest request) {
     if(request.getPrice() > 30000) {
       System.out.println("请求编号id=" + request.getId()+ "被" + this.name + "处理");

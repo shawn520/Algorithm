@@ -1,4 +1,4 @@
-package com.github.demo.designPattern.responsibililtyChain;
+package com.github.demo.designPattern.action.responsibililtyChain;
 
 /**
  * ViceSchoolMasterApprover
