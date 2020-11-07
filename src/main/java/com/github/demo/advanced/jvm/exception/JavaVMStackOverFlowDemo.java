@@ -11,7 +11,7 @@ package com.github.demo.advanced.jvm.exception;
  * @author Shawn
  * @date 2020/11/7
  */
-public class JavaVMStackOverFlowError {
+public class JavaVMStackOverFlowDemo {
 
     private int stackLength = 0;
 
@@ -21,7 +21,7 @@ public class JavaVMStackOverFlowError {
     }
 
     public static void main(String[] args) {
-        JavaVMStackOverFlowError javaVMStackOverFlowError = new JavaVMStackOverFlowError();
+        JavaVMStackOverFlowDemo javaVMStackOverFlowError = new JavaVMStackOverFlowDemo();
         try {
             javaVMStackOverFlowError.stackLeak();
         } catch (Throwable e) {
