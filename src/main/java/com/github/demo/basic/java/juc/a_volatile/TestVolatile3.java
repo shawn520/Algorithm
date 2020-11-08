@@ -36,7 +36,7 @@ class Button implements Runnable {
         System.out.println("打开电视机了");
     }
 
-    public void turnOn() {
+    private void turnOn() {
         this.flag = true;
     }
 }
