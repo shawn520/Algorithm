@@ -3,7 +3,11 @@ package com.github.demo.design.principle.inversion.segregation.improve2;
 /**
  * 设计原则：接口隔离原则。
  * 一个类对另外一个类的依赖应该建立在最小接口上
- * 
+ *
+ * 举例子：
+ * 文科生需要学习语数外，政治，历史，地理
+ * 理科生需要学习语数外，物理，化学，生物
+ *
  * @author Shawn
  * @date 2020/11/8
  */
