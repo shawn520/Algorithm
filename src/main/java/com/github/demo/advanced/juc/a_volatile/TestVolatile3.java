@@ -7,11 +7,11 @@ package com.github.demo.advanced.juc.a_volatile;
 public class TestVolatile3 {
 
     public static void main(String[] args) {
-        Button button = new Button();
-        new Thread(button).start();
+        TV tv = new TV();
+        new Thread(tv, "小明").start();
         while(true) {
-            if(button.flag) {
-                System.out.println("________");
+            if(tv.flag) {
+                System.out.println(Thread.currentThread().getName() + "可以看电视了");
                 break;
             }
         }
@@ -21,7 +21,7 @@ public class TestVolatile3 {
 
 
 
-class Button implements Runnable {
+class TV implements Runnable {
 
     volatile boolean flag = false;
 
@@ -33,7 +33,7 @@ class Button implements Runnable {
             e.printStackTrace();
         }
         turnOn();
-        System.out.println("打开电视机了");
+        System.out.println(Thread.currentThread().getName() + "打开电视机了");
     }
 
     private void turnOn() {
