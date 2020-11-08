@@ -1,4 +1,4 @@
-package com.github.demo.design.principle.inversion.segregation.improve2;
+package com.github.demo.design.principle.segregation.improve2;
 
 /**
  * 设计原则：接口隔离原则。

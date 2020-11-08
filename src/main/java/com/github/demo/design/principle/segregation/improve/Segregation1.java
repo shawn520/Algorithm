@@ -1,4 +1,4 @@
-package com.github.demo.design.principle.inversion.segregation.improve;
+package com.github.demo.design.principle.segregation.improve;
 
 /**
  * @author Shawn
