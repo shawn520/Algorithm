@@ -1,4 +1,4 @@
-package com.github.demo.basic.java.jvm;
+package com.github.demo.advanced.jvm;
 
 import java.util.Random;
 
