@@ -12,7 +12,6 @@ class Solution {
     public int findKthLargest(int[] nums, int k) {
         int len = nums.length;
         quicksort(nums, 0, len - 1);
-        System.out.println(Arrays.toString(nums));
         return nums[len-k];
     }
 
