@@ -28,6 +28,7 @@ class Solution {
         //[p+1, i] <=x
         //(i, j) >=x
         // [j, q] 未知
+        random(nums, p, q);
         int x = nums[p];  //pivot = a[p]
         int i = p;
         for(int j = p+1; j<=q; j++) {
@@ -38,6 +39,11 @@ class Solution {
         }
         exch(nums, p, i);
         return i;
+    }
+
+    public void random(int [] nums, int p, int q) {
+        int random = p + (int)(Math.random()*(q-p));
+        exch(nums, p, random);
     }
 
     public void exch(int[] nums, int index1, int index2) {
