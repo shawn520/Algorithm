@@ -1,6 +1,8 @@
 package com.github.demo.algorithm.leetcode.array.problem88;
 
 /**
+ * 88. 合并两个有序数组
+ *
  * @author Shawn
  * @date 2020/11/29
  */
