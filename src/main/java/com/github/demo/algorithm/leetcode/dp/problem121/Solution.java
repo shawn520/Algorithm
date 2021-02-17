@@ -8,18 +8,14 @@ package com.github.demo.algorithm.leetcode.dp.problem121;
  */
 class Solution {
     public int maxProfit(int[] prices) {
-        int n = prices.length;
-        int[] res = new int[n];
-        res[0] = 0;
+        int maxProfit = 0;
         int min = prices[0];
-        for(int i=1; i<n; i++) {
-            if(prices[i] - min > res[i-1]) {
-                res[i] = prices[i] - min;
-            } else {
-                res[i] = res[i-1];
+        for(int i=1; i<prices.length; i++) {
+            if(prices[i] - min > maxProfit) {
+                maxProfit = prices[i] - min;
             }
             if(prices[i] < min) min = prices[i];
         }
-        return res[n-1];
+        return maxProfit;
     }
 }
