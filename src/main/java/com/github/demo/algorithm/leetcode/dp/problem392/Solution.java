@@ -3,7 +3,7 @@ package com.github.demo.algorithm.leetcode.dp.problem392;
 /**
  * 392. 判断子序列
  *
- * 时间复杂度O(n)
+ * 时间复杂度O(m+n)
  * 空间复杂度O(1)
  *
  * @author Shawn
