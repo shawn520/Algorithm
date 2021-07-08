@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * 160. 相交链表
  *
- * 思路：hash集合
+ * 思路：a+c+b = c+b+a
  * @author Shawn
  * @date 2021/7/5
  */
