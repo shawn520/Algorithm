@@ -13,20 +13,17 @@ package com.github.demo.algorithm.leetcode.linkedlist.problem0201.solution2;
 class Solution {
     public ListNode removeDuplicateNodes(ListNode head) {
         if(null == head) return null;
-        ListNode p1 = null;
-        ListNode pre = null;
-        ListNode p2 = null;
-        for(p1=head; p1!=null; p1=p1.next) {
-            pre = p1;
-            p2 = p1.next;
-            while(p2!= null) {
-                if(p1.val == p2.val) {
-                    pre.next = p2.next;
+        ListNode ob = head;
+        while(ob != null) {
+            ListNode oc = ob;
+            while(oc.next != null) {
+                if(oc.next.val == ob.val) {
+                    oc.next = oc.next.next;
                 } else {
-                    pre = pre.next;
+                    oc = oc.next;
                 }
-                p2 = p2.next;
             }
+            ob = ob.next;
         }
         return head;
     }
